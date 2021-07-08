@@ -1,0 +1,23 @@
+{
+  "name": "fe_tomorrowars",
+  "version": "1.0.0",
+  "description": "Develop a browser game whose aim is to create a space army, able to conquer new planets fighting against other armies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T3-TomorrowDevs/fe_tomorrowars.git"
+  },
+  "keywords": [
+    "react",
+    "three.js"
+  ],
+  "author": "TomorroWars",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T3-TomorrowDevs/fe_tomorrowars/issues"
+  },
+  "homepage": "https://github.com/T3-TomorrowDevs/fe_tomorrowars#readme"
+}
