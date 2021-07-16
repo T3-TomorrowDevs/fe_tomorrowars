@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "start": "webpack serve --open"
+    "start": "webpack serve --open",
+    "test": "jest --env=jsdom",
+    "test-coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -23,23 +25,52 @@
   "homepage": "https://github.com/T3-TomorrowDevs/fe_tomorrowars#readme",
   "devDependencies": {
     "@babel/core": "^7.14.6",
+    "@babel/plugin-transform-runtime": "^7.14.5",
     "@babel/preset-env": "^7.14.7",
     "@babel/preset-react": "^7.14.5",
+    "@babel/runtime": "^7.14.6",
+    "@juggle/resize-observer": "^3.3.1",
+    "@react-three/drei": "^7.1.2",
+    "@react-three/fiber": "^7.0.5",
+    "@react-three/test-renderer": "^7.0.5",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.0.0",
+    "@testing-library/react-hooks": "^7.0.1",
+    "@types/jest": "^26.0.24",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.2",
+    "babel-jest": "^27.0.6",
     "babel-loader": "^8.2.2",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^5.2.6",
+    "enzyme": "^3.11.0",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.3.2",
+    "i": "^0.3.6",
+    "jest": "^27.0.6",
     "mini-css-extract-plugin": "^2.1.0",
+    "npm": "^7.20.0",
     "postcss": "^8.3.5",
     "postcss-loader": "^6.1.1",
     "postcss-preset-env": "^6.7.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-test-renderer": "^17.0.2",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",
+    "three": "^0.130.1",
     "webpack": "^5.43.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
+  },
+  "jest": {
+    "automock": false,
+    "setupFiles": [
+      "./setupTests.js"
+    ],
+    "verbose": true,
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
   }
 }
