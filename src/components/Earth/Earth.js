@@ -18,7 +18,7 @@ export default function Earth(props) {
     const earthRef = useRef();
     const cloudsRef = useRef();
 
-    // executed every single frame
+    // executed every single frame to rotate the earth
     useFrame(({ clock }) => {
         const elapsedTime = clock.getElapsedTime();
 
