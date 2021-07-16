@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import { ResizeObserver } from "@juggle/resize-observer";
+import Earth from '../../components/Earth/Earth';
 
 export default function App() {
     return (
-        <div>
-            <h1>Hello World</h1>
-        </div>
+        <Canvas className="canvas" resize={{ polyfill: ResizeObserver }}>
+            <Suspense fallback={null}>
+                <Earth />
+            </Suspense>
+        </Canvas>
     )
 }
