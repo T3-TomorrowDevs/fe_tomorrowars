@@ -16,11 +16,7 @@ describe('App testing', () => {
     //     expect(wrapper.find('h1').text()).toContain("Hello World");
     // });
 
-    it('should contain Canvas component', () => {
-        expect(wrapper.find('canvas')).toHaveLength(1);
-    });
-
-    it('should contain TopSection component', () => {
-        expect(wrapper.find('TopSection')).toHaveLength(1);
+    it('should contain HomePage component', () => {
+        expect(wrapper.find('HomePage')).toHaveLength(1);
     });
 });
