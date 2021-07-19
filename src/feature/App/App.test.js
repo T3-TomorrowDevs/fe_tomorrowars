@@ -19,4 +19,8 @@ describe('App testing', () => {
     it('should contain Canvas component', () => {
         expect(wrapper.find('canvas')).toHaveLength(1);
     });
+
+    it('should contain TopSection component', () => {
+        expect(wrapper.find('TopSection')).toHaveLength(1);
+    });
 });
