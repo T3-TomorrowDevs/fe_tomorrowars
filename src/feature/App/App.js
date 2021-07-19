@@ -7,6 +7,7 @@ import TopSection from '../../components/TopSection/TopSection';
 export default function App() {
     return (
         <div className="app">
+            // Title section
             <TopSection />
             // 3D Canvas
             <Canvas className="canvas" resize={{ polyfill: ResizeObserver }}>
