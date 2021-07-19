@@ -7,9 +7,9 @@ import TopSection from '../TopSection/TopSection';
 export default function HomePage() {
     return (
         <>
-            // Title section
+            {/*Title section*/}
             <TopSection />
-            // 3D Canvas
+            {/*3D Canvas*/}
             <Canvas className="canvas" resize={{ polyfill: ResizeObserver }}>
                 <Suspense fallback={null}>
                     <Earth />
