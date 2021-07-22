@@ -6,7 +6,7 @@ export default function PlanetArmy() {
     const { handleSubmit, register, formState: { errors } } = useForm();
 
     const onSubmit = (data) => {
-        saveData(data);
+        console.log(data);
     }
 
     return (
