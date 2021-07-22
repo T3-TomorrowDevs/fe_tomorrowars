@@ -2,6 +2,7 @@
 
 // family
 $font-tomorrow-wars: 'TomorroWars';
+$font-planet-army: 'courier';
 
 // weight
 $font-weight-light: 300;
@@ -12,9 +13,12 @@ $font-weight-super-bold: 800;
 // size
 $font-size-base: 1rem; // 16px
 $font-size-logo: ($font-size-base * 5); // 80px
+$font-size-sm: ($font-size-base * 1.125); // 18px
 
 /** Colors **/
 
 $color-logo: #e6c71d;
 $color-top-section-bg: #1756dd32;
 $color-canvas: #01040c;
+$color-font: #ffc000;
+$color-bg-components: #091623;
