@@ -1,9 +1,10 @@
 import React from 'react';
 
-export default function Main() {
+export default function Main({ children }) {
     return (
-        <div>
+        <div className="main">
             <h1>Main</h1>
+            {children}
         </div>
     )
 }
