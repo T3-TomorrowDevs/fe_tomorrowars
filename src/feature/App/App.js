@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import HomePage from '../../components/HomePage/HomePage';
 import Layout from '../../components/Layout/Layout';
 import PlanetArmy from '../../components/PlanetArmy/PlanetArmy';
+import Shop from '../../components/Shop/Shop';
 
 export default function App() {
     return (
@@ -17,6 +18,9 @@ export default function App() {
                     </Route>
                     {/* <Route path="/planetArmy">
                         <Layout><PlanetArmy /></Layout>
+                    </Route> */}
+                    {/* <Route path="/shop">
+                        <Layout><Shop /></Layout>
                     </Route> */}
                 </Switch>
             </BrowserRouter>
