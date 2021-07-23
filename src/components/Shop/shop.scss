@@ -1,0 +1,10 @@
+.shop {
+    border: 1px solid;
+    margin: 5% 10%;
+    font-family: $font-planet-army;
+    //background-color: $color-bg-components;
+    &__title {
+        text-transform: uppercase;
+        //color: $color-font;
+    }
+}
