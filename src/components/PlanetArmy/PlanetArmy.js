@@ -1,18 +1,23 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { useHistory } from 'react-router-dom';
 
 export default function PlanetArmy() {
 
     const { handleSubmit, register, formState: { errors } } = useForm();
 
+    const history = useHistory();
+
     const onSubmit = (data) => {
         console.log(data);
+
+        history.push("/shop");
     }
 
     return (
         <div className="planetArmy flex flex-col">
             <h3 className="planetArmy__title flex justify-around">Choose your planet and army name</h3>
-            
+
             <div className="planetArmy__form">
                 <form className="form flex flex-col" onSubmit={handleSubmit(onSubmit)}>
                     <div className="form__el flex flex-col col-2">
