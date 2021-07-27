@@ -5,9 +5,9 @@ import { mount } from 'enzyme';
 import BtnGoogle from "./BtnGoogle";
 
 describe('Google login button test', () => {
-
+    let wrapper;
     beforeEach(() => {
-        let wrapper = mount(<BtnGoogle />);
+         wrapper = mount(<BtnGoogle />);
     });
 
     it('should render the google login button', () => {

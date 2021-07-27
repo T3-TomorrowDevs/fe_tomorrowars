@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
-import "../BtnGoogle/BtnGoogle.scss";
+
 
 export default function App() {
   const [name, setName] = useState("");
