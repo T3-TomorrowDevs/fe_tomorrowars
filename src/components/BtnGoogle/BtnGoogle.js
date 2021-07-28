@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
-
+import { useHistory } from "react-router";
 
 export default function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [url, setUrl] = useState("");
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [url, setUrl] = useState("");
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+  const history = useHistory();
 
   const responseGoogle = (response) => {
-    console.log(JSON.stringify(response));
-    setName(response.profileObj.givenName);
-    setEmail(response.profileObj.email);
-    setUrl(response.profileObj.imageUrl);
-    setIsAuthenticated((prevAuth) => !prevAuth);
+    // console.log(JSON.stringify(response));
+    // setName(response.profileObj.givenName);
+    // setEmail(response.profileObj.email);
+    // setUrl(response.profileObj.imageUrl);
+    // setIsAuthenticated((prevAuth) => !prevAuth);
+
+    history.push("/planetArmy");
   };
 
   // const logout = () => {

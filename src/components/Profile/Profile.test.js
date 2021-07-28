@@ -1,6 +1,7 @@
 import React from "react";
 import '@testing-library/jest-dom';
-
+import { Provider } from "react-redux";
+import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 
 import Profile from "./Profile";
@@ -9,7 +10,18 @@ describe('Profile testing', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = mount(<Profile />);
+        const initialState = {
+            user: {
+                user: {
+                    level: 1,
+                    coin: 1000,
+                    name: "Angela"
+                }
+            }
+        }
+        const mockStore = configureStore();
+        const store = mockStore(initialState);
+        wrapper = mount(<Provider store={store}><Profile /></Provider>);
     });
 
     it('should contain profile info', () => {

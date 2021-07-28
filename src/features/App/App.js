@@ -16,12 +16,12 @@ export default function App() {
                     <Route exact path="/">
                         <HomePage />
                     </Route>
-                    {/* <Route path="/planetArmy">
+                    <Route path="/planetArmy">
                         <Layout><PlanetArmy /></Layout>
-                    </Route> */}
-                    {/* <Route path="/shop">
+                    </Route>
+                    <Route path="/shop">
                         <Layout><Shop /></Layout>
-                    </Route> */}
+                    </Route>
                 </Switch>
             </BrowserRouter>
         </div>
