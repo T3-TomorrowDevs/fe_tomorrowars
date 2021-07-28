@@ -1,6 +1,7 @@
 import React from "react";
 import '@testing-library/jest-dom';
-
+import { Provider } from "react-redux";
+import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 
 import Layout from "./Layout";
@@ -8,8 +9,21 @@ import Layout from "./Layout";
 describe('Layout testing', () => {
 
     let wrapper;
+
+    const initialState = {
+        user: {
+            user: {
+                level: 1,
+                coin: 1000,
+                name: "Angela"
+            }
+        }
+    };
+
     beforeEach(() => {
-        wrapper = mount(<Layout />);
+        const mockStore = configureStore();
+        const store = mockStore(initialState);
+        wrapper = mount(<Provider store={store}><Layout /></Provider>);
     });
 
     it('should contain Header component', () => {

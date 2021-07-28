@@ -1,6 +1,7 @@
 import React from "react";
 import '@testing-library/jest-dom';
-
+import { Provider } from "react-redux";
+import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 
 import Header from "./Header";
@@ -8,8 +9,19 @@ import Header from "./Header";
 describe('Header testing', () => {
 
     let wrapper;
+    const initialState = {
+        user: {
+            user: {
+                level: 1,
+                coin: 1000,
+                name: "Angela"
+            }
+        }
+    }
     beforeEach(() => {
-        wrapper = mount(<Header />);
+        const mockStore = configureStore();
+        const store = mockStore(initialState);
+        wrapper = mount(<Provider store={store}><Header /></Provider>);
     });
 
     it('should contain Header text', () => {
