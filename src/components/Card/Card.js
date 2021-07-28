@@ -25,13 +25,13 @@ export default function Card({ property }) {
                     {/* <li><span>Def </span>{troop_def}</li> */}
                 </ul>
                 {/* <div className="card__buy flex flex-row"> */}
-                    {/* <input className="card__input" type="text" placeholder={troop_num} name={troop_name}/>
+                {/* <input className="card__input" type="text" placeholder={troop_num} name={troop_name}/>
                     <button type="button" onClick={(e) => handleSubmit(e)}>BUY</button> */}
 
-                    <form className="card__buy flex flex-row" onSubmit={handleSubmit(onSubmit)}>
-                        <input className="card__input" {...register("troop_quantity")} id={troop_quantity} placeholder={troop_quantity}/>
-                        <button type="submit" >BUY</button>
-                    </form>
+                <form className="card__buy flex flex-row" onSubmit={handleSubmit(onSubmit)}>
+                    <input className="card__input" {...register("troop_quantity")} id={troop_quantity} placeholder={troop_quantity} />
+                    <button type="submit" >BUY</button>
+                </form>
                 {/* </div> */}
             </div>
         </div>
