@@ -3,7 +3,11 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    user: null
+    user: {
+      level: 1,
+      coin: 1000,
+      name: "Angela"
+    }
   },
   reducers: {
     userProfile: (state, action) => {
@@ -13,7 +17,7 @@ export const userSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { userProfile } = userSlice.actions;
+export const { userProfile, useMoney } = userSlice.actions;
 
 export const selectUser = (state) => state.user.user;
 
