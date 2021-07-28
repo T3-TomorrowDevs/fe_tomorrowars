@@ -15,4 +15,8 @@ describe('Header testing', () => {
     it('should contain Header text', () => {
         expect(wrapper.find('h1').text()).toContain("Header");
     });
+
+    it('should contain Profile component', () => {
+        expect(wrapper.find('Profile')).toHaveLength(1);
+    });
 });
