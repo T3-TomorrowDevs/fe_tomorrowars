@@ -17,13 +17,13 @@ export default function App() {
     setIsAuthenticated((prevAuth) => !prevAuth);
   };
 
-  const logout = () => {
-    setName("");
-    setEmail("");
-    setUrl("");
-    setIsAuthenticated((prevAuth) => !prevAuth);
-    alert("Logout!");
-  };
+  // const logout = () => {
+  //   setName("");
+  //   setEmail("");
+  //   setUrl("");
+  //   setIsAuthenticated((prevAuth) => !prevAuth);
+  //   alert("Logout!");
+  // };
 
   return (
     <div className="App">
@@ -36,14 +36,14 @@ export default function App() {
         cookiePolicy={"single_host_origin"}
       /></h1> 
       <br />
-      {isAuthenticated && (
+      {/* {isAuthenticated && (
         <h1><GoogleLogout
           //clientId="1032570624691-r3chb9q4js45vn60mhm0vhifb1mnphvi.apps.googleusercontent.com"
           clientId="173330898047-f8igvjb5tvnt52gtloc17tmgmv0ejh14.apps.googleusercontent.com"
           buttonText="Logout"
           onLogoutSuccess={logout}
         ></GoogleLogout></h1>
-      )}
+      )} */}
     </div>
   );
 }
