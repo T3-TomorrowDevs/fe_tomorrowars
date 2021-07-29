@@ -10,7 +10,7 @@ export default function Profile() {
         <div className="profile flex align-center">
             <div className="profile__info flex flex-col">
                 <span>Level: {user.level}</span>
-                <span>Coin: {user.coin}</span>
+                <span>Credits: {user.coin}</span>
             </div>
             <div className="profile__name">
                 <span>Name: {user.name}</span>
