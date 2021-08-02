@@ -23,10 +23,10 @@ export default function PlanetArmy() {
         setLoading(true);
         console.log(data);
 
-        sendPlanetArmyName(data);
+        savePlanetArmyName(data);
     }
 
-    const sendPlanetArmyName = (data) => {
+    const savePlanetArmyName = (data) => {
         // TODO: Add headers
         const response = axios
             .post("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/planetArmy", data)

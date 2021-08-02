@@ -14,7 +14,7 @@ describe('Profile testing', () => {
             user: {
                 user: {
                     level: 1,
-                    coin: 1000,
+                    credits: 1000,
                     name: "Angela"
                 }
             }
@@ -27,7 +27,7 @@ describe('Profile testing', () => {
     it('should contain profile info', () => {
         expect(wrapper.find('span')).toHaveLength(3);
         expect(wrapper.find('span').at(0).text()).toContain("Level: ");
-        expect(wrapper.find('span').at(1).text()).toContain("Coin: ");
+        expect(wrapper.find('span').at(1).text()).toContain("Credits: ");
         expect(wrapper.find('span').at(2).text()).toContain("Name: ");
     });
 });

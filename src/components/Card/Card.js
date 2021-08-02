@@ -15,9 +15,9 @@ export default function Card({ property }) {
         console.log(troop_id);
 
         // Checks if the user has enogh money
-        if (user.coin - (troop_cost * data.troop_quantity) >= 0) {
+        if (user.credits - (troop_cost * data.troop_quantity) >= 0) {
 
-            const money = user.coin - (troop_cost * data.troop_quantity);
+            const money = user.credits - (troop_cost * data.troop_quantity);
 
             dispatch(useMoney(money));
         } else {
