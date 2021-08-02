@@ -5,23 +5,9 @@ import { mount } from 'enzyme';
 
 import PlanetArmy from "./PlanetArmy";
 
-import { screen, render, fireEvent } from "@testing-library/react";
+import { screen, render, fireEvent, waitFor } from "@testing-library/react";
 
 describe('PlanetArmy testing', () => {
-
-    // let wrapper;
-    // beforeEach(() => {
-    //     wrapper = mount(<PlanetArmy />);
-    // });
-
-    // it('should contain component title', () => {
-    //     expect(wrapper.find('h3').text()).toContain("Choose your planet and army name");
-    // });
-
-    // it('should render the fields of the form', () => {
-    //     expect(wrapper.find('input')).toHaveLength(2);
-    //     expect(wrapper.find('button').text()).toContain("Submit");
-    // });
 
     it("should render the basic fields", () => {
         render(<PlanetArmy />);
@@ -33,8 +19,8 @@ describe('PlanetArmy testing', () => {
 
     it("should validate form fields", async () => {
         const mockSave = jest.fn();
-        render(<PlanetArmy saveData={mockSave} />);
-        
+        render(<PlanetArmy savePlanetArmyName={mockSave} />);
+
         fireEvent.input(screen.getByRole("textbox", { name: /Planet's name/i }), {
             target: {
                 value:
@@ -50,7 +36,9 @@ describe('PlanetArmy testing', () => {
         });
 
         fireEvent.submit(screen.getByRole("button", { name: /submit/i }));
-        // expect(await screen.findAllByRole("alert")).toHaveLength(3);
         expect(mockSave).not.toBeCalled();
+        await waitFor(() => {
+            expect(screen.getByText("Submit")).toBeInTheDocument();
+        });
     });
 });

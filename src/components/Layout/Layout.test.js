@@ -14,7 +14,7 @@ describe('Layout testing', () => {
         user: {
             user: {
                 level: 1,
-                coin: 1000,
+                credits: 1000,
                 name: "Angela"
             }
         }

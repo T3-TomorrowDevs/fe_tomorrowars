@@ -1,6 +1,7 @@
 import React from "react";
 import '@testing-library/jest-dom';
-
+import { Provider } from "react-redux";
+import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 
 import Main from "./Main";
@@ -10,7 +11,18 @@ describe('Main testing', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = mount(<Main><Shop /></Main>);
+        const initialState = {
+            user: {
+                user: {
+                    level: 1,
+                    credits: 1000,
+                    name: "Angela"
+                }
+            }
+        }
+        const mockStore = configureStore();
+        const store = mockStore(initialState);
+        wrapper = mount(<Provider store={store}><Main><Shop /></Main></Provider>);
     });
 
     it('should contain Main text', () => {

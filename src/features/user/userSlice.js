@@ -5,7 +5,7 @@ export const userSlice = createSlice({
   initialState: {
     user: {
       level: 1,
-      coin: 1000,
+      credits: 1000,
       name: "Angela"
     }
   },
@@ -14,7 +14,7 @@ export const userSlice = createSlice({
       state.user = action.payload
     },
     useMoney: (state, action) => {
-      state.user.coin = action.payload;
+      state.user.credits = action.payload;
     }
   }
 });
