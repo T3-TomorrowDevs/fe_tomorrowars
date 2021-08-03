@@ -21,7 +21,7 @@ export default function Card({ property }) {
 
             dispatch(useMoney(money));
         } else {
-            setError("troop_quantity", { type: "focus" , message: "not enough credit"}, { shouldFocus: true });
+            setError("troop_quantity", { type: "focus", message: "not enough credit" }, { shouldFocus: true });
         }
     }
 
@@ -29,15 +29,18 @@ export default function Card({ property }) {
         <div id={troop_id} className="card">
             <img src={troop_picture} alt={troop_name} />
             <div className="details">
-                <p className="location">
-                    Name: {troop_name}<br />
-                    Level: {troop_level}
-                </p>
-                <ul className="features">
-                    <li><span>Cost </span>{troop_cost}</li>
-                    <li><span>Att/Def </span>{troop_att}/{troop_def}</li>
-                    {/* <li><span>Def </span>{troop_def}</li> */}
-                </ul>
+                <div className="location">
+                    <span>Name:</span> {troop_name}<br />
+                    <span>Level:</span> {troop_level}<br />
+                    <span>Cost:</span> {troop_cost}<br />
+                    <span>Att/Def:</span> {troop_att}/{troop_def}
+                </div>
+                {/* <ul className="features">
+                    <li><span>Name: </span>{troop_name}</li>
+                    <li><span>Level: </span>{troop_level}</li>
+                    <li><span>Cost: </span>{troop_cost}</li>
+                    <li><span>Att/Def: </span>{troop_att}/{troop_def}</li>
+                </ul> */}
                 {/* <div className="card__buy flex flex-row"> */}
                 {/* <input className="card__input" type="text" placeholder={troop_num} name={troop_name}/>
                     <button type="button" onClick={(e) => handleSubmit(e)}>BUY</button> */}
@@ -46,7 +49,7 @@ export default function Card({ property }) {
                     <input type="number" name="name" className="card__input" {...register("troop_quantity")} id={troop_id} placeholder={troop_quantity} />
                     <button type="submit" >BUY</button>
                 </form>
-                {errors.troop_quantity && <span>{errors.troop_quantity.message}</span> }
+                {errors.troop_quantity && <span>{errors.troop_quantity.message}</span>}
                 {/* </div> */}
             </div>
         </div>
