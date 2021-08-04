@@ -1,13 +1,19 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+const accessToken = localStorage.getItem("access_token");
+
 export const fetchGetUser = createAsyncThunk("user/getUser", () => {
 
-  return fetch("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/user")
-        .then(response => {
-            if (!response.ok) throw Error(response.statusText)
-            return response.json();
-        }).then(json => json);
+  const headers = {
+    'Authorization': 'Bearer ' + accessToken
+  };
+
+  return fetch("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/user", { headers })
+    .then(response => {
+      if (!response.ok) throw Error(response.statusText)
+      return response.json();
+    }).then(json => json);
 
   // return axios.get("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/user")
   //   .then((response) => response.data)

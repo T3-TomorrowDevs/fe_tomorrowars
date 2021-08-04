@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
 import { useHistory } from "react-router";
+import axios from "axios";
 
 export default function App() {
   // const [name, setName] = useState("");
@@ -9,16 +10,28 @@ export default function App() {
   // const [url, setUrl] = useState("");
   // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const history = useHistory();
 
-  const responseGoogle = (response) => {
-    // console.log(JSON.stringify(response));
-    // setName(response.profileObj.givenName);
-    // setEmail(response.profileObj.email);
-    // setUrl(response.profileObj.imageUrl);
-    // setIsAuthenticated((prevAuth) => !prevAuth);
+  useEffect(() => {
+    if (isAuthenticated) {
+      history.push("/planetArmy");
+  }
+  }, [isAuthenticated])
 
-    history.push("/planetArmy");
+  const responseGoogle = (response) => {
+
+    axios
+      .post("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/auth", {
+        token: response.accessToken
+      })
+      .then((res) => {
+        localStorage.setItem('access_token', res.data.access_token);
+        localStorage.setItem('refresh_token', res.data.refresh_token);
+        setIsAuthenticated(true);
+      });
+
+    //history.push("/planetArmy");
   };
 
   // const logout = () => {
@@ -38,7 +51,7 @@ export default function App() {
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
-      /></h1> 
+      /></h1>
       <br />
       {/* {isAuthenticated && (
         <h1><GoogleLogout
