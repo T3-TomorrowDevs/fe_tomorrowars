@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Card from '../Card/Card';
 import data from '../../data/data';
-import axios from 'axios';
+import axiosInstance from '../../axios/axios';
 import { useState } from 'react';
 
 export default function Shop() {
@@ -11,7 +11,7 @@ export default function Shop() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/shop")
+        axiosInstance.get("/shop")
             .then((response) => {
                 setProperties(response.data);
                 setLoading(false);

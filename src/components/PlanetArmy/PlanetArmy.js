@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
+import axiosInstance from "../../axios/axios";
 
 export default function PlanetArmy() {
 
@@ -28,8 +29,7 @@ export default function PlanetArmy() {
 
     const savePlanetArmyName = (data) => {
         // TODO: Add headers
-        const response = axios
-            .post("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/planetArmy", data)
+        const response = axiosInstance.post("/planetArmy", data)
             .then((response) => {
                 setLoading(false);
                 setIsRedirect(true);
