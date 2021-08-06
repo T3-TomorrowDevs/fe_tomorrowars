@@ -30,10 +30,17 @@ export default function Card({ property }) {
             <img src={troop_picture} alt={troop_name} />
             <div className="details">
                 <div className="location">
-                    <span>Name:</span> {troop_name}<br />
+                    <div className="flex"><span>Name: </span>{troop_name}</div>
+                    <div className="flex"><span>Level: </span>{troop_level}</div>
+                    <div className="flex"><span>Cost: </span>{troop_cost}</div>
+                    <div className="flex"><span>Att/Def: </span>{troop_att}/{troop_def}</div>
+                    {/* <div>Level: {troop_level}</div>
+                    <div>Cost: {troop_cost}</div>
+                    <div>Att/Def: {troop_att}/{troop_def}</div> */}
+                    {/* <span>Name:</span> {troop_name}<br />
                     <span>Level:</span> {troop_level}<br />
                     <span>Cost:</span> {troop_cost}<br />
-                    <span>Att/Def:</span> {troop_att}/{troop_def}
+                    <span>Att/Def:</span> {troop_att}/{troop_def} */}
                 </div>
                 {/* <ul className="features">
                     <li><span>Name: </span>{troop_name}</li>

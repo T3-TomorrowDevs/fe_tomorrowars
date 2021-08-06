@@ -8,13 +8,16 @@
         font-size: $font-size-lg;
         //color: $color-font;
     }
+    &__btn {
+        padding-right: 15px;
+    }
 }
 
 .slider {
     position: relative;
     //max-width: 226px;
     margin: 0 auto;
-
+    padding-bottom: 20px;
     &__wrapper {
         display: flex;
         flex-wrap: wrap;
