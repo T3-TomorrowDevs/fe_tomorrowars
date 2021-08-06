@@ -35,8 +35,11 @@ export default function Shop() {
                     <div className="slider__wrapper">
                         {properties && properties.map((property) => <Card key={property.troop_id} property={property} />)}
                     </div>
-                </div>}
-
+                </div>
+            }
+            <div className="shop__btn flex justify-end">
+                <button>Go to Battle</button>
+            </div>
         </div>
     )
 }
