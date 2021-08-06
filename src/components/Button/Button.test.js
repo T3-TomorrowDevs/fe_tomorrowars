@@ -10,7 +10,7 @@ describe('Button testing', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = mount(<Button />);
+        wrapper = mount(<Button text="Click"/>);
     });
 
     it('should contain Button text', () => {
