@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import axiosInstance from "../../axios/axios";
+import Button from '../Button/Button';
 
 export default function PlanetArmy() {
 
@@ -62,7 +63,8 @@ export default function PlanetArmy() {
                         {errors.armyName && <span>This field is required</span>}
                     </div>
 
-                    <button className="form__submit col-4" type="submit" disabled={loading}>{loading ? 'Loading...' : 'Submit'}</button>
+                    {/* <button className="form__submit col-4" type="submit" disabled={loading}>{loading ? 'Loading...' : 'Submit'}</button> */}
+                    <Button typeClass="col-4" text={loading ? 'Loading...' : 'Submit'} disabled={loading} />
                 </form>
             </div>
         </div>

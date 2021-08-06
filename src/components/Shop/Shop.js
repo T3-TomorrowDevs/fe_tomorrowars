@@ -3,12 +3,9 @@ import Card from '../Card/Card';
 import data from '../../data/data';
 import axiosInstance from '../../axios/axios';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
-import { selectUser } from '../../features/user/userSlice';
+import Button from '../Button/Button';
 
 export default function Shop() {
-
-    const user = useSelector(selectUser);
 
     const [properties, setProperties] = useState();
     const [loading, setLoading] = useState(false);
@@ -31,7 +28,7 @@ export default function Shop() {
 
     return (
         <div className="shop flex flex-col">
-            <h3 className="shop__title flex justify-around">Shop credits: {user.credits}</h3>
+            <h3 className="shop__title flex justify-around">Shop</h3>
             {loading
                 ? 'Loading...'
                 :
@@ -42,7 +39,7 @@ export default function Shop() {
                         </div>
                     </div>
                     <div className="shop__btn flex justify-end">
-                        <button>Go to Battle</button>
+                        <Button text="Go to Galaxy" />
                     </div>
                 </div>
             }
