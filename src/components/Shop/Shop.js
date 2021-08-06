@@ -3,8 +3,12 @@ import Card from '../Card/Card';
 import data from '../../data/data';
 import axiosInstance from '../../axios/axios';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../features/user/userSlice';
 
 export default function Shop() {
+
+    const user = useSelector(selectUser);
 
     const [properties, setProperties] = useState();
     const [loading, setLoading] = useState(false);
@@ -15,7 +19,6 @@ export default function Shop() {
             .then((response) => {
                 setProperties(response.data);
                 setLoading(false);
-                //console.log(response.data);
             })
             .catch(error => {
                 //setErrorMessage({ errorMessage: error.message });
@@ -28,18 +31,21 @@ export default function Shop() {
 
     return (
         <div className="shop flex flex-col">
-            <h3 className="shop__title flex justify-around">Shop</h3>
+            <h3 className="shop__title flex justify-around">Shop credits: {user.credits}</h3>
             {loading
                 ? 'Loading...'
-                : <div className="slider">
-                    <div className="slider__wrapper">
-                        {properties && properties.map((property) => <Card key={property.troop_id} property={property} />)}
+                :
+                <div>
+                    <div className="slider">
+                        <div className="slider__wrapper">
+                            {properties && properties.map((property) => <Card key={property.troop_id} property={property} />)}
+                        </div>
+                    </div>
+                    <div className="shop__btn flex justify-end">
+                        <button>Go to Battle</button>
                     </div>
                 </div>
             }
-            <div className="shop__btn flex justify-end">
-                <button>Go to Battle</button>
-            </div>
         </div>
     )
 }
