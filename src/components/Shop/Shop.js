@@ -4,11 +4,16 @@ import data from '../../data/data';
 import axiosInstance from '../../axios/axios';
 import { useState } from 'react';
 import Button from '../Button/Button';
+import { useHistory } from 'react-router-dom';
 
 export default function Shop() {
 
+    //const properties = data.troops;
+    //const property = data.troops[0];
+
     const [properties, setProperties] = useState();
     const [loading, setLoading] = useState(false);
+    const history = useHistory();
 
     useEffect(() => {
         setLoading(true);
@@ -23,8 +28,9 @@ export default function Shop() {
             })
     }, []);
 
-    //const properties = data.troops;
-    //const property = data.troops[0];
+    const goToGalaxy = () => {
+        history.push("/galaxy");
+    }
 
     return (
         <div className="shop flex flex-col">
@@ -39,7 +45,7 @@ export default function Shop() {
                         </div>
                     </div>
                     <div className="shop__btn flex justify-end">
-                        <Button text="Go to Galaxy" />
+                        <Button text="Go to Galaxy" onClick={goToGalaxy} />
                     </div>
                 </div>
             }
