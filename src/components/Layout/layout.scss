@@ -4,3 +4,8 @@
         height: calc(100vh - 60px);
     }
 }
+
+.layout__bg {
+    background-image: url("../../assets/images/universe_bg.jpg");
+    background-size: cover;
+}

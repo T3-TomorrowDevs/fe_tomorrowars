@@ -1,12 +1,11 @@
 .shop {
-    //border: 1px solid;
     margin: 2% 10%;
     font-family: $font-planet-army;
     //background-color: $color-bg-components;
     &__title {
         text-transform: uppercase;
         font-size: $font-size-lg;
-        //color: $color-font;
+        color: $color-font;
     }
     &__btn {
         padding-right: 15px;

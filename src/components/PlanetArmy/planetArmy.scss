@@ -3,9 +3,10 @@
     margin: 5% 10%;
     font-family: $font-planet-army;
     //background-color: $color-bg-components;
+    background-color: rgb(36 50 101 / 51%);
     &__title {
         text-transform: uppercase;
-        //color: $color-font;
+        color: $color-font;
     }
     &__form {
         margin: 2% 10%;
@@ -15,6 +16,7 @@
 
 .form {
     font-size: $font-size-sm;
+    color: $color-font;
     &__el {
         padding-bottom: 25px;
     }

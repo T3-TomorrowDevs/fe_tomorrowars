@@ -20,7 +20,7 @@ export default function Layout({ children }) {
     return (
         <div>
             {user.length !== 0 &&
-                <div>
+                <div className="layout__bg">
                     <Header />
                     <div className="main__container">
                         <Sidebar />
