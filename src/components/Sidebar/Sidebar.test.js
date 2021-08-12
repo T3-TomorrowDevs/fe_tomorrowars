@@ -12,7 +12,7 @@ describe('Sidebar testing', () => {
         wrapper = mount(<Sidebar />);
     });
 
-    it('should contain Sidebar text', () => {
-        expect(wrapper.find('h1').text()).toContain("Sidebar");
+    it('should contain Navbar component', () => {
+        expect(wrapper.find('Navbar')).toHaveLength(1);
     });
 });
