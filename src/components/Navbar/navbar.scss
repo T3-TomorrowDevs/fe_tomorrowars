@@ -9,24 +9,9 @@
     font-family: $font-planet-army;
     font-size: $font-size-sm;
     padding-top: 1em;
-    // &__btn {
-    //     cursor: pointer;
-    //     text-decoration: none;
-    //     color: $color-font;
-    //     font-family: $font-planet-army;
-    //     font-size: $font-size-sm;
-    // }
-    &__btn {
-        cursor: pointer;
-        margin-bottom: 1em;
-    }
 }
 
-.img__shop {
-    width: 70px;
-    height: 70px;
-    margin-bottom: .3em;
-}
+
 
 // .btn__shop {
 //     background-image: url("../../assets/images/sidebar-btn/reshot-icon-moon-rover-M7R4BJZS3L.png");
@@ -35,6 +20,4 @@
 //     height: 70px;
 // }
 
-.btn__text {
-    text-align: center;
-}
+
