@@ -45,8 +45,8 @@ export default function App() {
   return (
     <div className="App">
       <h1><GoogleLogin
-        //clientId="1032570624691-r3chb9q4js45vn60mhm0vhifb1mnphvi.apps.googleusercontent.com"
-        clientId="173330898047-f8igvjb5tvnt52gtloc17tmgmv0ejh14.apps.googleusercontent.com"
+        //clientId="173330898047-f8igvjb5tvnt52gtloc17tmgmv0ejh14.apps.googleusercontent.com"
+        clientId="61323348904-uusnfpeahhklfrmt6150t5kfn4jlk93c.apps.googleusercontent.com"
         buttonText="Login with Google"
         onSuccess={responseGoogle}
         onFailure={responseGoogle}
