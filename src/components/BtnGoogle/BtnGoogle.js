@@ -22,7 +22,7 @@ export default function App() {
   const responseGoogle = (response) => {
 
     axios
-      .post("https://tomorrowars.herokuapp.com/login", {
+      .post("https://tomorrowars.herokuapp.com/login/", {
         token: response.accessToken
       })
       .then((res) => {
