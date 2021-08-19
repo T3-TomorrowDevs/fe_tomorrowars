@@ -23,7 +23,7 @@ export default function App() {
 
     axios
       .post("https://tomorrowars.herokuapp.com/login/", {
-        access-token: response.accessToken
+        'access-token': response.accessToken
       })
       .then((res) => {
         localStorage.setItem('access_token', res.data.token);
