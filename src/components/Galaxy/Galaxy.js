@@ -5,7 +5,7 @@ import PlanetsSystem from "../PlanetsSystem/PlanetsSystem";
 
 export default function Galaxy() {
     return (
-        <Canvas className="canvas" resize={{ polyfill: ResizeObserver }} camera={{ position: [0, 20, 25], fov: 45 }}>
+        <Canvas className="canvas" resize={{ polyfill: ResizeObserver }} camera={{ position: [0, 10, 40], fov: 45 }}>
             <Suspense fallback={null}>
                 <PlanetsSystem />
             </Suspense>
