@@ -2,6 +2,7 @@
 @import "./base/fonts";
 @import "./base/base";
 @import "./base/flexbox";
+@import "./base/spacing";
 @import "../../features/App/app.scss";
 @import "../../components/Logo/logo.scss";
 @import "../../components/TopSection/topSection.scss";
@@ -18,3 +19,4 @@
 @import "../../components/Galaxy/galaxy.scss";
 @import "../../components/Navbar/navbar.scss";
 @import "../../components/BtnImage/btnImage.scss";
+@import "../../components/Modal/modal.scss";
