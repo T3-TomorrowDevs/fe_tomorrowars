@@ -2,16 +2,16 @@ import React from "react";
 import '@testing-library/jest-dom';
 import { mount } from 'enzyme';
 
-import Modal from "./Modal";
+import Battles from "./Battles";
 
-describe('Modal testing', () => {
+describe('Battles testing', () => {
 
     let wrapper;
     beforeEach(() => {
-        wrapper = mount(<Modal open="true" />);
+        wrapper = mount(<Battles />);
     });
 
     it('should contain Button component', () => {
-        expect(wrapper.find('Button')).toHaveLength(1);
+        expect(wrapper.find('h3').text()).toContain("Battles");
     });
 });
