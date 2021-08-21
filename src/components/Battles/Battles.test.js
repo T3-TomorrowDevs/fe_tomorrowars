@@ -11,7 +11,7 @@ describe('Battles testing', () => {
         wrapper = mount(<Battles />);
     });
 
-    it('should contain Button component', () => {
+    it('should contain Battles text', () => {
         expect(wrapper.find('h3').text()).toContain("Battles");
     });
 });
