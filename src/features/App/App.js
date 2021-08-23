@@ -8,6 +8,7 @@ import Layout from '../../components/Layout/Layout';
 import PlanetArmy from '../../components/PlanetArmy/PlanetArmy';
 import Shop from '../../components/Shop/Shop';
 import Galaxy from '../../components/Galaxy/Galaxy';
+import Attack from '../../components/Attack/Attack';
 
 export default function App() {
     return (
@@ -25,6 +26,9 @@ export default function App() {
                     </Route>
                     <Route path="/galaxy">
                         <Layout><Galaxy /></Layout>
+                    </Route>
+                    <Route path="/attack">
+                        <Layout><Attack /></Layout>
                     </Route>
                 </Switch>
             </BrowserRouter>
