@@ -3,11 +3,13 @@ import { Canvas } from '@react-three/fiber';
 import { ResizeObserver } from "@juggle/resize-observer";
 import PlanetsSystem from "../PlanetsSystem/PlanetsSystem";
 import Modal from "../Modal/Modal";
+import { useHistory } from 'react-router-dom';
 
 export default function Galaxy() {
 
     const [isOpen, setIsOpen] = useState(false);
     const [planetName, setPlanetName] = useState();
+    const history = useHistory();
 
     const handleClick = (e) => {
         setIsOpen(true);
@@ -15,7 +17,7 @@ export default function Galaxy() {
     };
 
     const goToAttack = () => {
-        console.log("ATTACK");
+        history.push("/attack");
     }
 
     return (

@@ -1,0 +1,9 @@
+.attack {
+    margin: 2% 10%;
+    font-family: $font-planet-army;
+    &__title {
+        text-transform: uppercase;
+        font-size: $font-size-lg;
+        color: $color-font;
+    }
+}
