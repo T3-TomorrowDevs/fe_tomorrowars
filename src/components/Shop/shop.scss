@@ -10,6 +10,12 @@
     &__btn {
         padding-right: 15px;
     }
+    &__container {
+        display: flex;
+        max-width: 1000px;
+        flex-direction: column;
+        margin: 0 auto;
+    }
 }
 
 .slider {
