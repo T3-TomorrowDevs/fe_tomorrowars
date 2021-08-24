@@ -18,7 +18,7 @@ export const fetchGetUser = createAsyncThunk("user/getUser", () => {
   // return axios.get("https://c4ad5875-e804-4639-bd44-a07b3a2f480d.mock.pstmn.io/api/user")
   //   .then((response) => response.data)
   //   .catch((error) => error)
-})
+});
 
 export const userSlice = createSlice({
   name: 'user',

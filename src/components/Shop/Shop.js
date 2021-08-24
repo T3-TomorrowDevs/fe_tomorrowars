@@ -38,7 +38,7 @@ export default function Shop() {
             {loading
                 ? 'Loading...'
                 :
-                <div>
+                <div className="shop__container">
                     <div className="slider">
                         <div className="slider__wrapper">
                             {properties && properties.map((property) => <Card key={property.troop_id} property={property} />)}
