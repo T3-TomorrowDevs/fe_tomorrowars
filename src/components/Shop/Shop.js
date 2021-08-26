@@ -17,10 +17,11 @@ export default function Shop() {
 
     useEffect(() => {
         setLoading(true);
-        axiosInstance.get("/shop")
+        axiosInstance.get("/shop/")
             .then((response) => {
-                setProperties(response.data);
-                setLoading(false);
+                console.log(response);
+                //setProperties(response.data);
+                //setLoading(false);
             })
             .catch(error => {
                 //setErrorMessage({ errorMessage: error.message });
