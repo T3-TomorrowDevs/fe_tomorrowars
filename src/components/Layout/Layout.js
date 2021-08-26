@@ -12,10 +12,10 @@ export default function Layout({ children }) {
     console.log(user);
 
     // for fetching an API on mount
-    // useEffect(() => {
-    //     // get user information
-    //     dispatch(fetchGetUser());
-    // }, []);
+    useEffect(() => {
+        // get user information
+        dispatch(fetchGetUser());
+    }, []);
 
     return (
         <div>

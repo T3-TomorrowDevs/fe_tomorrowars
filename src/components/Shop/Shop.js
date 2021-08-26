@@ -19,9 +19,8 @@ export default function Shop() {
         setLoading(true);
         axiosInstance.get("/shop/")
             .then((response) => {
-                console.log(response);
-                //setProperties(response.data);
-                //setLoading(false);
+                setProperties(response.data);
+                setLoading(false);
             })
             .catch(error => {
                 //setErrorMessage({ errorMessage: error.message });

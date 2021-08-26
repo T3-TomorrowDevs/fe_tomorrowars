@@ -15,13 +15,13 @@ export default function App() {
         <div className="app">
             <BrowserRouter>
                 <Switch>
-                    {/* <Route exact path="/">
+                    <Route exact path="/">
                         <HomePage />
                     </Route>
                     <Route path="/planetArmy">
                         <Layout><PlanetArmy /></Layout>
-                    </Route> */}
-                    <Route exact path="/">
+                    </Route>
+                    <Route path="/shop">
                         <Layout><Shop /></Layout>
                     </Route>
                     <Route path="/galaxy">
