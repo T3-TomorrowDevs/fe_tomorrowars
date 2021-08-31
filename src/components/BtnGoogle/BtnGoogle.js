@@ -3,6 +3,9 @@ import GoogleLogin from "react-google-login";
 import { GoogleLogout } from "react-google-login";
 import { useHistory } from "react-router";
 import axios from "axios";
+// import { useDispatch, useSelector } from "react-redux";
+// import Button from "../Button/Button";
+// import { selectUser } from "../../features/user/userSlice";
 
 export default function App() {
   // const [name, setName] = useState("");
@@ -12,6 +15,8 @@ export default function App() {
 
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const history = useHistory();
+  //const dispatch = useDispatch();
+  //const user = useSelector(selectUser);
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -30,8 +35,12 @@ export default function App() {
         //localStorage.setItem('refresh_token', res.data.refresh_token);
         setIsAuthenticated(true);
       });
-
-    //history.push("/planetArmy");
+    
+    // if (user.registered) {
+    //   history.push("/galaxy");
+    // } else {
+    //   history.push("/planetArmy");
+    // }
   };
 
   // const logout = () => {
@@ -52,6 +61,7 @@ export default function App() {
         onFailure={responseGoogle}
         cookiePolicy={"single_host_origin"}
       /></h1>
+      {/* <Button text="Login" type="button" onClick={responseGoogle}/> */}
       <br />
       {/* {isAuthenticated && (
         <h1><GoogleLogout
