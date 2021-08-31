@@ -26,7 +26,8 @@ export const userSlice = createSlice({
     // user: {
     //   level: 1,
     //   credits: 1000,
-    //   name: "Angela"
+    //   name: "Angela",
+    //   registered: true
     // }
     loading: '',
     error: '',
