@@ -1,9 +1,50 @@
 .attack {
-    margin: 2% 10%;
+    background-color: rgb(36 50 101 / 51%);
+    margin: 5% 10%;
     font-family: $font-planet-army;
+    font-size: $font-size-md;
+    color: $color-font;
+    max-width: 2400px;
     &__title {
         text-transform: uppercase;
         font-size: $font-size-lg;
-        color: $color-font;
+    }
+    &__content {
+        margin: 2% 5%;
+        padding-bottom: 30px;
+    }
+    &__planet {
+        width: 40%;
+        margin-right: 10px;
+    }
+    &__multiply-container {
+        width: 300px;
+        height: 300px;
+        margin-right: 10px;
+    }
+    &__btn {
+        margin: 0 10px 10px 0; 
+    }
+}
+
+.multiply {
+    &__btn {
+        width: max-content;
+    }
+    &__dice-img {
+        margin: 10px;
+        width: 95px;
+    }
+}
+
+@include desktop {
+    .attack {
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__dice {
+            margin-top: 10px;
+        }
     }
 }
