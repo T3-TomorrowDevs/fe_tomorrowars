@@ -10,6 +10,7 @@ import { selectUser } from '../../features/user/userSlice';
 export default function Galaxy() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [planetName, setPlanetName] = useState();
     const [modalContent, setModalContent] = useState();
     const history = useHistory();
     const user = useSelector(selectUser);
@@ -17,15 +18,26 @@ export default function Galaxy() {
     const handleClick = (e) => {
         setIsOpen(true);
         const planetName = e.object.name;
-        const planetNameUL = e.object.name.charAt(0) + e.object.name.slice(1).toLowerCase();
+        setPlanetName(planetName);
 
-        user.planetName.includes(planetNameUL)
+        user.planetName.includes(capitalizeFirstLetter(planetName))
             ? setModalContent(<span className="galaxy__modal">{planetName} is your planet</span>)
             : setModalContent(<span className="galaxy__modal">Do you want to attack the {planetName} planet?</span>)
     };
 
+    const capitalizeFirstLetter = (word) => {
+        return word.charAt(0) + word.slice(1).toLowerCase();
+    }
+
+    /**
+     * Goes to attack page with the planet name
+     */
     const goToAttack = () => {
-        history.push("/attack");
+        history.push({
+            pathname: '/attack',
+            search: '?planetName=' + planetName,
+            state: {planetName: capitalizeFirstLetter(planetName)}
+        });
     }
 
     return (
