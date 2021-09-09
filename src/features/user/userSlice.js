@@ -27,7 +27,8 @@ export const userSlice = createSlice({
     //   level: 1,
     //   credits: 1000,
     //   name: "Angela",
-    //   registered: true
+    //   registered: true,
+    //   planetName: ["Plutone", "Marte"]
     // }
     loading: '',
     error: '',
